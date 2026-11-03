@@ -1,0 +1,46 @@
+{
+  "name": "email-domain-check",
+  "version": "1.0.0",
+  "description": "Check a domain's e-mail setup the way receivers see it: MX, SPF (with the 10-lookup limit), DKIM, DMARC and MTA-STS, with fixes in plain words. DNS over HTTPS only. Made by Novu Web Solutions, novu.ee",
+  "type": "module",
+  "main": "email-domain-check.mjs",
+  "exports": {
+    ".": "./email-domain-check.mjs"
+  },
+  "bin": {
+    "email-domain-check": "cli.mjs"
+  },
+  "files": [
+    "email-domain-check.mjs",
+    "cli.mjs",
+    "worker.mjs",
+    "wrangler.example.jsonc"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "email",
+    "dmarc",
+    "spf",
+    "dkim",
+    "mta-sts",
+    "dns",
+    "deliverability",
+    "cloudflare-workers",
+    "estonia"
+  ],
+  "homepage": "https://novu.ee/tooriistad/e-posti-kontroll/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/novuwebsolutions/email-domain-check.git"
+  },
+  "bugs": {
+    "url": "https://github.com/novuwebsolutions/email-domain-check/issues"
+  },
+  "author": "Novu Web Solutions OÜ (https://novu.ee)",
+  "license": "MIT"
+}

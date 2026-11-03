@@ -1,0 +1,12 @@
+// Copy to wrangler.jsonc, then: npx wrangler deploy
+{
+  "name": "email-domain-check",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-10-01",
+  // Outgoing requests go out to the public internet, as a visitor's would,
+  // never straight to the origin behind one of your own Cloudflare zones.
+  "compatibility_flags": ["global_fetch_strictly_public"],
+  // Checks per visitor IP per minute. The id only has to be unique within
+  // your Cloudflare account.
+  "ratelimits": [{ "name": "IP_LIMIT", "namespace_id": "1001", "simple": { "limit": 10, "period": 60 } }]
+}
